@@ -1,1 +1,1 @@
-README HERE DETAILS HERE
+LIVE DEMO: https://hewny.github.io/shopping-cart/
