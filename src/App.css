@@ -1,3 +1,65 @@
+.NavigationBar {
+  display: block;
+  background: darkslategrey;
+  margin: 0;
+  padding: 5px;
+  width: 100%;
+  text-align: right;
+}
+
+.NavigationBar a {
+  color: white;
+  text-decoration: none;
+}
+
+.ProductPageWrapper {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  background: lightslategray;
+}
+
+.ProductPageWrapper div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: transparent;
+  border: solid;
+  border-width: 1px;
+  border-radius: 15px;
+  width: 100px;
+  height: 120px;
+  margin: 5px;
+  padding: 5px;
+  font-size: 0.5em;
+}
+
+.ProductPageWrapper div img {
+  width: 70%;
+  margin: auto;
+  text-align: center;
+}
+
+.ProductPageWrapper div span {
+  width: 100%;
+  text-align: center;
+}
+
+.ProductPageWrapper div button {
+  background: transparent;
+  border: solid;
+  border-width: 1px;
+  border-radius: 15px;
+  line-height: 1em;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.ProductPageWrapper div button:hover {
+  background: white;
+  color: black;
+}
+
 .App {
   text-align: center;
 }
