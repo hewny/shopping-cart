@@ -1,21 +1,27 @@
-const Products = () => {
+import Images from "../images/index"
+
+const Products = (props) => {
+  const { products, setProducts } = props
+
+  const handleAddToCart = (index) => {
+    let newProducts = [...products]
+    newProducts[index].cart = true;
+    newProducts[index].quantity += 1;
+    setProducts(newProducts)
+  }
+
   return (
     <div>
       <div>THIS IS PRODUCTS PAGE</div>
       <div className="ProductPageWrapper">
-        <div>
-          <img src="https://assets.shop.loblaws.ca/products/20858330/b2/en/front/20858330_front_a06_@2.png" alt="spam"></img>
-          <span>Product Name</span>
-          <span>$0.00</span>
-          <button>Add to Cart</button>
-        </div>
-        <div>Item1</div>
-        <div>Item1</div>
-        <div>Item1</div>
-        <div>Item1</div>
-        <div>Item1</div>
-        <div>Item1</div>
-        <div>Item1</div>
+        {products.map((product, index) => (
+          <div key={index}>
+            <img src={Images[product.image]} alt={product.name}></img>
+            <span>{product.name}</span>
+            <span>{product.price}</span>
+            <button onClick={() => {handleAddToCart(index)}}>Add to Cart</button>
+          </div>
+        ))}
       </div>
     </div>
   );
