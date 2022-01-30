@@ -1,3 +1,8 @@
+:root {
+  overflow: none;
+  overflow-x: hidden;
+}
+
 .NavigationBar {
   display: block;
   background: darkslategrey;
@@ -5,11 +10,21 @@
   padding: 5px;
   width: 100%;
   text-align: right;
+  font-size: 2.5em;
+}
+.NavigationBar::-webkit-scrollbar {
+  display: none;
 }
 
 .NavigationBar a {
   color: white;
   text-decoration: none;
+}
+
+.NavigationBar button {
+  background: transparent;
+  border: none;
+  color: white;
 }
 
 .ProductPageWrapper {
@@ -27,16 +42,16 @@
   border: solid;
   border-width: 1px;
   border-radius: 15px;
-  width: 100px;
-  height: 120px;
+  width: 250px;
+  height: 325px;
   margin: 5px;
   padding: 5px;
-  font-size: 0.5em;
+  font-size: 1.3em;
 }
 
 .ProductPageWrapper div img {
-  width: 70%;
-  margin: auto;
+  width: 85%;
+  margin: 0 auto;
   text-align: center;
 }
 
@@ -50,8 +65,9 @@
   border: solid;
   border-width: 1px;
   border-radius: 15px;
-  line-height: 1em;
+  line-height: 2em;
   width: 70%;
+  padding: 0;
   margin: 0 auto;
 }
 
@@ -59,6 +75,48 @@
   background: white;
   color: black;
 }
+
+.sidebar-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  background: grey;
+}
+
+.sidebar-container-active {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  background: grey;
+  animation: showmenu 1s ;
+  animation-fill-mode: forwards;
+}
+
+.sidebar-container-hidden {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  background: grey;
+  animation: hidemenu 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes showmenu {
+  0% { transform: translateX(300px); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes hidemenu {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(300px); }
+}
+
 
 .App {
   text-align: center;
