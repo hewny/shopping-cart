@@ -18,7 +18,7 @@ const Products = (props) => {
           <div key={index}>
             <img src={Images[product.image]} alt={product.name}></img>
             <span>{product.name}</span>
-            <span>{product.price}</span>
+            <span>${product.price.toFixed(2)}</span>
             <button onClick={() => {handleAddToCart(index)}}>Add to Cart</button>
           </div>
         ))}

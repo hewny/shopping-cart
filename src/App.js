@@ -9,58 +9,66 @@ import Cart from "./components/Cart";
 const App = () => {
   const [products, setProducts] = useState([
     {
+      id: 0,
       image: "apple",
       name: "Honeycrisp Apple",
-      price: "$1.58",
+      price: 1.58,
       cart: false, 
       quantity: 0,
     },
     {
+      id: 1,
       image: "avocado",
       name: "Avocado",
-      price: "$1.29",
+      price: 1.29,
       cart: false, 
       quantity: 0,
     },
     {
+      id: 2,
       image: "banana",
       name: "Banana",
-      price: "$1.50",
+      price: 1.50,
       cart: false, 
       quantity: 0,
     },
     {
+      id: 3,
       image: "garlic",
       name: "Garlic",
-      price: "$1.54",
+      price: 1.54,
       cart: false, 
       quantity: 0,
     },
     {
+      id: 4,
       image: "lettuce",
       name: "Lettuce",
-      price: "$2.49",
+      price: 2.49,
       cart: false, 
       quantity: 0,
     },
     {
+      id: 5,
       image: "lime",
       name: "Lime",
-      price: "$0.79",
+      price: 0.79,
       cart: false, 
       quantity: 0,
     },
     {
+      id: 6,
       image: "redpepper",
       name: "Red Pepper",
-      price: "$2.00",
+      price: 2.00,
       cart: false, 
       quantity: 0,
     },
     {
+      id: 7,
       image: "tomato",
       name: "Tomato",
-      price: "$0.29",
+      price: 0.29,
       cart: false, 
       quantity: 0,
     },
@@ -68,7 +76,7 @@ const App = () => {
 
   return (
     <BrowserRouter>
-      <NavigationBar products={products}/>
+      <NavigationBar products={products} setProducts={setProducts}/>
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/home" element={<Home />} />
