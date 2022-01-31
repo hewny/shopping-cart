@@ -17,7 +17,7 @@ const NavigationBar = (props) => {
 
   return (
     <div className="NavigationBar">
-      <Link to="/home">Home</Link> | <Link to="/products">Products</Link> |{" "}
+      <Link to="/">Home</Link> | <Link to="/products">Products</Link> |{" "}
       <button onClick={toggleDisplay}>
         <BsFillCartFill />({total})
       </button>

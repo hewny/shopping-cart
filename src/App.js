@@ -4,7 +4,6 @@ import { useState } from "react";
 import NavigationBar from "./components/NavigationBar";
 import Home from "./components/Home";
 import Products from "./components/Products";
-import Cart from "./components/Cart";
 
 const App = () => {
   const [products, setProducts] = useState([
@@ -78,10 +77,8 @@ const App = () => {
     <BrowserRouter>
       <NavigationBar products={products} setProducts={setProducts}/>
       <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/home" element={<Home />} />
+        <Route exact path="/" element={<Home />} />s
         <Route path="/products" element={<Products products={products} setProducts={setProducts} />} />
-        <Route path="/cart" element={<Cart products={products}/>} />
       </Routes>
     </BrowserRouter>
   );
